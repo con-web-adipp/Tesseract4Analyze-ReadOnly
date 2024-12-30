@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir "Tesseract4Analyze-ReadOnly"
-touch "Tesseract4Analyze-ReadOnly/Tesseract4Analyze-ReadOnly.exe" # create empty file and give it an "exe" extension
-zip "Tesseract4Analyze-ReadOnly-v1.0.0.appkg" "Tesseract4Analyze-ReadOnly/Tesseract4Analyze-ReadOnly.exe" "settings.json"
-rm -rf "Tesseract4Analyze-ReadOnly"
+APP_NAME="Tesseract4Analyze-ReadOnly"
+
+mkdir $APP_NAME
+touch $APP_NAME/$APP_NAME.exe # create empty file and give it an "exe" extension
+zip $APP_NAME.appkg $APP_NAME/$APP_NAME.exe settings.json
+rm -rf $APP_NAME
